@@ -19,8 +19,8 @@ const Mentoring = () => {
       icon: User
     },
     {
-      title: 'Online Courses',
-      description: 'Professional development for HR professionals',
+      title: 'People Project Implementation',
+      description: 'Take the next step to implement your plan',
       icon: BookOpen
     }
   ];
