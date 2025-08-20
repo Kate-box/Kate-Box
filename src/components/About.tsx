@@ -17,10 +17,10 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                Meet Kate Box: From HR Admin to Strategic Business Partner
+                Kate's Approach: From HR to Business Partner
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Kate spent 15+ years climbing from HR generalist roles to Chief People Officer positions. She knows exactly what it takes to break free from administrative tasks and become a strategic business partner that drives measurable business results.
+                Kate works with business leaders and HR professionals to shift the perception of HR from a support function to a critical driver of business performance.
               </p>
             </div>
 
@@ -30,8 +30,8 @@ const About = () => {
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Real-World Experience</h3>
-                  <p className="text-gray-600">We've personally made the transition from reactive HR admin to strategic business partner. Every framework we teach has been battle-tested in Fortune 500 companies.</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Commercial Alignment</h3>
+                  <p className="text-gray-600">Teaching HR leaders how to align people strategies with core business objectives to deliver measurable ROI.</p>
                 </div>
               </div>
 
@@ -40,8 +40,8 @@ const About = () => {
                   <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Business-First Approach</h3>
-                  <p className="text-gray-600">Unlike traditional HR training, we focus on business acumen, commercial thinking, and executive influence - the skills that actually matter for strategic roles.</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Leadership Influence</h3>
+                  <p className="text-gray-600">Equipping HR professionals with the skills to engage and influence the C-suite.</p>
                 </div>
               </div>
 
@@ -50,8 +50,18 @@ const About = () => {
                   <div className="w-3 h-3 bg-green-600 rounded-full"></div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Measurable Outcomes</h3>
-                  <p className="text-gray-600">87% of our participants get promoted within 12 months. We track real career outcomes, not just course completion rates.</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Data-Driven Decision Making</h3>
+                  <p className="text-gray-600">Leveraging workforce analytics to predict challenges, solve problems, and capitalize on opportunities.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">People-Centric Impact</h3>
+                  <p className="text-gray-600">Building high-performance cultures that drive productivity, retention, and employee engagement.</p>
                 </div>
               </div>
             </div>
