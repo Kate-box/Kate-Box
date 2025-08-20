@@ -117,12 +117,12 @@ const Mentoring = () => {
               Connect with Kate Box to discover how strategic HR leadership can drive your business success.
             </p>
             <a 
-              href="https://www.hrimpactlab.com" 
+              href="https://outlook.office.com/book/HRImpactLab@kaidos.co.uk/?ismsaljsauthenabled=true" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-all duration-200 font-semibold"
             >
-              <span>Visit HR Impact Lab</span>
+              <span>Book a Consultation</span>
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
