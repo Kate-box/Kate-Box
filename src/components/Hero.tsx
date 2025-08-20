@@ -29,7 +29,7 @@ const Hero = () => {
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-loose pb-12 mb-4">
             Calculate Your
             <span className="block" style={{color: '#087590', paddingBottom: '1rem', marginBottom: '0.25rem', overflow: 'visible'}}>
-              People Strategy Impact
+              People Strategy
             </span>
           </h1>
           
