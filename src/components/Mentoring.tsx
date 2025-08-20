@@ -50,40 +50,8 @@ const Mentoring = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Column - Bio */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
-                  <User className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Kate Box</h3>
-                  <p className="text-blue-600 font-medium">HR Impact Lab Founder</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 text-gray-700">
-                <p>
-                  With a unique background in Biology, Kate brings a scientific approach to HR strategy, 
-                  believing that "people are the DNA of your business."
-                </p>
-                <p>
-                  Her expertise lies in strategic HR leadership, focusing on aligning people strategy 
-                  with commercial success and bridging the gap between people and profit.
-                </p>
-                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
-                  <p className="font-medium text-blue-900 italic">
-                    "HR should drive business success, not just support it."
-                  </p>
-                  <p className="text-sm text-blue-700 mt-2">- Kate Box</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Approach */}
+        <div className="grid lg:grid-cols-1 gap-12 items-center mb-16">
+          {/* Approach */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Kate's Approach: From HR to Business Partner</h3>
