@@ -10,7 +10,7 @@ const Mentoring = () => {
     },
     {
       title: 'Mentoring for HR',
-      description: 'Practical, impact-driven solutions for business leaders',
+      description: 'Practical, impact-driven solutions for HR professionals',
       icon: Award
     },
     {
