@@ -86,34 +86,45 @@ const Mentoring = () => {
           {/* Right Column - Approach */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Her Approach</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Kate's Approach: From HR to Business Partner</h3>
+              <p className="text-gray-600 mb-6">
+                Kate works with business leaders and HR professionals to shift the perception of HR from a support function to a critical driver of business performance.
+              </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <Star className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Scientific Method</h4>
-                    <p className="text-gray-600">Applying biological principles to understand organizational behavior</p>
+                    <h4 className="font-semibold text-gray-900">Commercial Alignment</h4>
+                    <p className="text-gray-600">Teaching HR leaders how to align people strategies with core business objectives to deliver measurable ROI.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Star className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Commercial Focus</h4>
-                    <p className="text-gray-600">Aligning people strategy with business success and profitability</p>
+                    <h4 className="font-semibold text-gray-900">Leadership Influence</h4>
+                    <p className="text-gray-600">Equipping HR professionals with the skills to engage and influence the C-suite.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Star className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Collaborative Leadership</h4>
-                    <p className="text-gray-600">Empowering leadership through strategic collaboration</p>
+                    <h4 className="font-semibold text-gray-900">Data-Driven Decision Making</h4>
+                    <p className="text-gray-600">Leveraging workforce analytics to predict challenges, solve problems, and capitalize on opportunities.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Star className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Practical Solutions</h4>
-                    <p className="text-gray-600">Delivering impact-driven, actionable strategies</p>
+                    <h4 className="font-semibold text-gray-900">People-Centric Impact</h4>
+                    <p className="text-gray-600">Building high-performance cultures that drive productivity, retention, and employee engagement.</p>
                   </div>
                 </div>
               </div>
