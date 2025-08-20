@@ -45,7 +45,7 @@ const Mentoring = () => {
             Meet Kate Box
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Founder and Expert HR Strategist at HR Impact Lab
+            Founder of HR Impact Lab
           </p>
         </div>
 
