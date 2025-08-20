@@ -25,16 +25,6 @@ const Mentoring = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      text: "Kate's scientific approach to HR has transformed how we think about people strategy.",
-      author: "Business Leader"
-    },
-    {
-      text: "Her ability to bridge the gap between people and profit is exactly what our organization needed.",
-      author: "CEO"
-    }
-  ];
 
   return (
     <section id="mentoring" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -118,20 +108,6 @@ const Mentoring = () => {
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            What People Say
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
-                <p className="text-blue-600 font-medium">- {testimonial.author}</p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="text-center">
