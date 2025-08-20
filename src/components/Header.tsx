@@ -10,6 +10,13 @@ const Header = () => {
     { name: 'Mentoring', href: '#mentoring' },
   ];
 
+  const scrollToCalculators = () => {
+    const calculatorsSection = document.getElementById('calculators');
+    if (calculatorsSection) {
+      calculatorsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed w-full top-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +47,10 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 shadow-md hover:shadow-lg">
+            <button 
+              onClick={scrollToCalculators}
+              className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 shadow-md hover:shadow-lg"
+            >
               Get Started
             </button>
           </nav>
@@ -67,7 +77,13 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 mt-4">
+            <button 
+              onClick={() => {
+                scrollToCalculators();
+                setIsMenuOpen(false);
+              }}
+              className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 mt-4"
+            >
               Get Started
             </button>
           </div>
