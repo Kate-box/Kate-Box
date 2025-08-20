@@ -433,9 +433,9 @@ const ROICalculator = () => {
           onChange={(e) => handleInputChange('workingDaysPerYear', e.target.value)}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500"
         >
-          <option value={250}>250 days (Mon-Fri)</option>
-          <option value={300}>300 days (6 days/week)</option>
-          <option value={365}>365 days (Daily)</option>
+          <option value={365}>365 (Daily)</option>
+          <option value={310}>310 (6 days a week)</option>
+          <option value={260}>260 (5 days a week)</option>
         </select>
       </div>
       <div>

@@ -119,9 +119,9 @@ const AbsenceCalculator = ({ onResultUpdate }) => {
             onChange={(e) => handleInputChange('workingDaysPerYear', e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           >
-            <option value={250}>250 days</option>
-            <option value={260}>260 days</option>
-            <option value={365}>365 days</option>
+            <option value={365}>365 (Daily)</option>
+            <option value={310}>310 (6 days a week)</option>
+            <option value={260}>260 (5 days a week)</option>
           </select>
         </div>
       </div>
