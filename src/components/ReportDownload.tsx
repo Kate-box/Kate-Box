@@ -410,7 +410,7 @@ const ReportDownload: React.FC<ReportDownloadProps> = ({ isOpen, onClose }) => {
 
     <div class="footer">
         <h3>About HR Impact Lab</h3>
-        <p>Founded by Kate Box, HR Impact Lab bridges the gap between people and profit through strategic HR leadership. With a scientific approach rooted in biological principles, we help organizations understand that "people are the DNA of your business."</p>
+        <p>Founded by Kate Box, HR Impact Lab bridges the gap between people and profit through strategic HR leadership.</p>
         <p><strong>Contact:</strong> Visit www.hrimpactlab.com for consulting services, training programs, and ongoing support.</p>
         <p><em>"HR should drive business success, not just support it."</em> - Kate Box</p>
         
