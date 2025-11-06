@@ -11,7 +11,6 @@ declare global {
 const EmailCaptureModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     // Check if user has visited before
@@ -54,7 +53,6 @@ const EmailCaptureModal = () => {
         if (successMessage && !showSuccess) {
           console.log('Kit success detected!');
           setShowSuccess(true);
-          setTimeout(() => handleClose(), 3000);
           clearInterval(checkForSuccess);
         }
       }, 500);
@@ -108,10 +106,13 @@ const EmailCaptureModal = () => {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Thanks for joining!
+                Check Your Email!
               </h3>
-              <p className="text-gray-600">
-                Have fun calculating your people costs
+              <p className="text-gray-600 mb-3">
+                We've sent you a confirmation email. Please click the link in the email to confirm your subscription and access the calculator.
+              </p>
+              <p className="text-sm text-gray-500">
+                Don't forget to check your spam folder if you don't see it.
               </p>
             </div>
           ) : (
