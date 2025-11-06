@@ -26,7 +26,6 @@ const TurnoverCalculator = ({ onResultUpdate }) => {
     const calculatedResult = inputs.leavers * inputs.avgSalary * (inputs.replacementCostPercentage / 100);
     setResult(calculatedResult);
     
-    // Update shared context with detailed data
     updateCalculatorData('turnover', {
       id: 'turnover',
       result: calculatedResult,
@@ -34,9 +33,7 @@ const TurnoverCalculator = ({ onResultUpdate }) => {
       type: 'turnover',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(calculatedResult);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.leavers, inputs.avgSalary, inputs.replacementCostPercentage]);
 
   const handleInputChange = (field, value) => {
     const numValue = parseFloat(value) || 0;

@@ -32,7 +32,6 @@ const ProfitPerEmployeeCalculator = ({ onResultUpdate }) => {
     setPreviousProfitPerEmployee(previous);
     setImprovement(change);
     
-    // Update shared context for dashboard
     updateCalculatorData('profit', {
       id: 'profit',
       result: current,
@@ -40,9 +39,7 @@ const ProfitPerEmployeeCalculator = ({ onResultUpdate }) => {
       type: 'profit',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(current);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.netProfit, inputs.totalEmployees, inputs.previousNetProfit, inputs.previousEmployees]);
 
   const handleInputChange = (field, value) => {
     const numValue = parseFloat(value) || 0;

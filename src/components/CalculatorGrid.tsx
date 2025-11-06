@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { MessageSquare, Users, UserX, Calendar, AlertTriangle, TrendingUp } from 'lucide-react';
+import { useCalculatorContext } from '../context/CalculatorContext';
 import CommunicationCalculator from './calculators/CommunicationCalculator';
 import EngagementCalculator from './calculators/EngagementCalculator';
 import TurnoverCalculator from './calculators/TurnoverCalculator';
@@ -9,7 +10,7 @@ import ProfitPerEmployeeCalculator from './calculators/ProfitPerEmployeeCalculat
 
 const CalculatorGrid = () => {
   const [activeCalculator, setActiveCalculator] = useState('communication');
-  const [results, setResults] = useState({});
+  const { updateCalculatorData } = useCalculatorContext();
 
   const calculators = [
     {
@@ -65,12 +66,9 @@ const CalculatorGrid = () => {
   const activeCalc = calculators.find(calc => calc.id === activeCalculator);
   const ActiveComponent = activeCalc?.component;
 
-  const handleResultUpdate = (calculatorId, result) => {
-    setResults(prev => ({
-      ...prev,
-      [calculatorId]: result
-    }));
-  };
+  const handleResultUpdate = useCallback((calculatorId: string, result: any) => {
+    updateCalculatorData(calculatorId, result);
+  }, [updateCalculatorData]);
 
   return (
     <section id="calculators" className="py-20 bg-white">
@@ -126,7 +124,7 @@ const CalculatorGrid = () => {
 
               {ActiveComponent && (
                 <ActiveComponent 
-                  onResultUpdate={(result) => handleResultUpdate(activeCalculator, result)}
+                  onResultUpdate={(result: any) => handleResultUpdate(activeCalculator, result)}
                 />
               )}
             </div>

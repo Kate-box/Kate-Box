@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { MessageSquare, Calculator } from 'lucide-react';
 import { useCalculatorContext } from '../../context/CalculatorContext';
 
@@ -14,18 +14,24 @@ const CommunicationCalculator = ({ onResultUpdate }) => {
 
   // Sync with shared inputs when they change from other calculators
   useEffect(() => {
-    setInputs(prev => ({
-      ...prev,
-      employees: sharedInputs.totalEmployees,
-      avgSalary: sharedInputs.avgSalary
-    }));
-  }, [sharedInputs]);
+    setInputs(prev => {
+      // Only update if values actually changed to prevent infinite loops
+      if (prev.employees !== sharedInputs.totalEmployees || prev.avgSalary !== sharedInputs.avgSalary) {
+        return {
+          ...prev,
+          employees: sharedInputs.totalEmployees,
+          avgSalary: sharedInputs.avgSalary
+        };
+      }
+      return prev;
+    });
+  }, [sharedInputs.totalEmployees, sharedInputs.avgSalary]);
 
   useEffect(() => {
     const calculatedResult = inputs.employees * inputs.avgSalary * (inputs.lossPercentage / 100);
+    
     setResult(calculatedResult);
     
-    // Update shared context for dashboard
     updateCalculatorData('communication', {
       id: 'communication',
       result: calculatedResult,
@@ -33,9 +39,7 @@ const CommunicationCalculator = ({ onResultUpdate }) => {
       type: 'communication',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(calculatedResult);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.employees, inputs.avgSalary, inputs.lossPercentage]);
 
   const handleInputChange = (field, value) => {
     const numValue = parseFloat(value) || 0;

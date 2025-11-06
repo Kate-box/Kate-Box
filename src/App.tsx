@@ -6,6 +6,7 @@ import AdvancedHRTools from './components/AdvancedHRTools';
 import ResultsDashboard from './components/ResultsDashboard';
 import Mentoring from './components/Mentoring';
 import Footer from './components/Footer';
+import EmailCaptureModal from './components/EmailCaptureModal';
 import { CalculatorProvider } from './context/CalculatorContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <ResultsDashboard />
         <Mentoring />
         <Footer />
+        <EmailCaptureModal />
       </div>
     </CalculatorProvider>
   );

@@ -30,7 +30,6 @@ const EngagementCalculator = ({ onResultUpdate }) => {
     setDisengagedEmployees(disengaged);
     setResult(calculatedResult);
     
-    // Update shared context
     updateCalculatorData('engagement', {
       id: 'engagement',
       result: calculatedResult,
@@ -38,9 +37,7 @@ const EngagementCalculator = ({ onResultUpdate }) => {
       type: 'engagement',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(calculatedResult);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.totalEmployees, inputs.engagementRate, inputs.avgSalary, inputs.productivityLoss]);
 
   const handleInputChange = (field, value) => {
     const numValue = parseFloat(value) || 0;

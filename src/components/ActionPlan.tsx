@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Target, CheckCircle, Plus, X } from 'lucide-react';
+import BookCallModal from './BookCallModal';
 
 const ActionPlan = () => {
   const [selectedTimeframe, setSelectedTimeframe] = useState('90-days');
   const [customGoals, setCustomGoals] = useState<string[]>([]);
   const [newGoal, setNewGoal] = useState('');
+  const [showBookCallModal, setShowBookCallModal] = useState(false);
 
   const timeframes = [
     { id: '30-days', label: '30 Days', description: 'Quick wins and foundation building' },
@@ -73,6 +75,16 @@ const ActionPlan = () => {
 
   const removeCustomGoal = (index: number) => {
     setCustomGoals(customGoals.filter((_, i) => i !== index));
+  };
+
+  const handleDownload = () => {
+    // TODO: Implement actual PDF download logic here
+    console.log('Downloading action plan...');
+    
+    // Show the book call modal after download
+    setTimeout(() => {
+      setShowBookCallModal(true);
+    }, 500);
   };
 
   const currentPlan = actionPlans[selectedTimeframe as keyof typeof actionPlans];
@@ -183,7 +195,10 @@ const ActionPlan = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <button className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg">
+                <button 
+                  onClick={handleDownload}
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg"
+                >
                   Download Action Plan
                 </button>
                 <button className="flex-1 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
@@ -215,6 +230,12 @@ const ActionPlan = () => {
           </div>
         </div>
       </div>
+      
+      {/* Book Call Modal */}
+      <BookCallModal 
+        isOpen={showBookCallModal} 
+        onClose={() => setShowBookCallModal(false)} 
+      />
     </section>
   );
 };

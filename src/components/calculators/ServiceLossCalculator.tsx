@@ -39,7 +39,6 @@ const ServiceLossCalculator = ({ onResultUpdate }) => {
     setRetentionLoss(annualRetentionLoss);
     setResult(totalAnnualLoss);
     
-    // Update shared context
     updateCalculatorData('service', {
       id: 'service',
       result: totalAnnualLoss,
@@ -47,9 +46,7 @@ const ServiceLossCalculator = ({ onResultUpdate }) => {
       type: 'service',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(totalAnnualLoss);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.lostCustomersPerDay, inputs.locations, inputs.avgRevenuePerCustomer, inputs.qualityFailureRate, inputs.reworkCostPerIncident, inputs.workingDaysPerYear, inputs.customerRetentionRate, inputs.avgCustomerLifetimeValue]);
 
   const handleInputChange = (field, value) => {
     setInputs(prev => ({

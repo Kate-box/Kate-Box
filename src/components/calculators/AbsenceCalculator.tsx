@@ -16,7 +16,6 @@ const AbsenceCalculator = ({ onResultUpdate }) => {
     
     setResult(calculatedResult);
     
-    // Update shared context for dashboard
     updateCalculatorData('absence', {
       id: 'absence',
       result: calculatedResult,
@@ -24,9 +23,7 @@ const AbsenceCalculator = ({ onResultUpdate }) => {
       type: 'absence',
       timestamp: new Date()
     });
-    
-    onResultUpdate?.(calculatedResult);
-  }, [inputs, onResultUpdate, updateCalculatorData]);
+  }, [inputs.totalDaysLostLast12Months, inputs.avgDailySalaryRate]);
 
   const handleInputChange = (field, value) => {
     const numValue = parseFloat(value) || 0;
